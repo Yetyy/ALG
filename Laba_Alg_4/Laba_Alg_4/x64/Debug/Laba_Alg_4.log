@@ -1,0 +1,4 @@
+﻿  Source.cpp
+E:\Cici+\Laba_Alg_4\Laba_Alg_4\Source.cpp(70,10): warning C4101: type_arr: неиспользованная локальная переменная
+E:\Cici+\Laba_Alg_4\Laba_Alg_4\Source.cpp(56,10): warning C4101: mine: неиспользованная локальная переменная
+  Laba_Alg_4.vcxproj -> E:\Cici+\Laba_Alg_4\x64\Debug\Laba_Alg_4.exe
