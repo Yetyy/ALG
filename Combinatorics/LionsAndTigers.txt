@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+void Place(int* a, int k, int n, int r) {
+	if (r == k) {
+		int l = 0, t = 0; bool f = true;
+		if (a[0] == 1)
+			l++;
+		else
+			t++;
+		for (int i = 1; i < k; i++) {
+			if (a[i] == 1)
+				l++;
+			else if (a[i - 1] == a[i] && a[i] == 2)
+			{
+				f = false;
+				break;
+			}
+			else
+				t++;
+
+		}
+		if (f && t == 4 && l == 5) {
+			for (int i = 0; i < k; i++) {
+				a[i] == 1 ? cout << "l" : cout << "t";
+			}
+			cout << '\n';
+		}
+	}
+	else {
+		for (int i = 1; i <= n; i++) {
+			a[r] = i;
+			Place(a, k, n, r + 1);
+		}
+	}
+}
+int main()
+{
+	int n=2, k=9;
+
+	int* a = new int[k];
+	Place(a, k, n, 0);
+}
